@@ -1,0 +1,38 @@
+{
+  "name": "musiclessons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon app.js",
+    "vueApp": "npm start --prefix ../music-lessons",
+    "start": "concurrently \"npm run server\" \"npm run vueApp\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeMonki/MusicLessons.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeMonki/MusicLessons/issues"
+  },
+  "homepage": "https://github.com/DeMonki/MusicLessons#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "express-validator": "^6.11.1",
+    "jsonwebtoken": "^8.5.1",
+    "mssql": "^7.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.7"
+  }
+}
