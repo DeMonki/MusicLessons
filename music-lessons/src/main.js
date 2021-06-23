@@ -5,6 +5,7 @@ import TurnOffAutocomplete from 'vue-turn-off-autocomplete';
 import { BootstrapVue, IconsPlugin, BootstrapVueIcons } from 'bootstrap-vue'
 import router from './router'
 import store from './store'
+import { VBHover } from 'bootstrap-vue'
 
 
 // Import Bootstrap an BootstrapVue CSS files (order is important)
@@ -15,6 +16,7 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 Vue.use(BootstrapVueIcons)
 Vue.use(TurnOffAutocomplete)
+Vue.use(VBHover)
 
 Vue.config.productionTip = false
 

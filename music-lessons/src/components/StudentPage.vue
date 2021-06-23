@@ -24,15 +24,20 @@
 </div>
           <div v-if="this.lessons.length>0" class="lesson-form" >
 <ul>
-              <b-row class="align-items-center"  v-for="lesson in lessons" :key="lesson.LessonId" >
+  
+         <b-row class="align-items-center"  v-for="lesson in lessons" :key="lesson.LessonId" >
+
+                   
+                  <b-col v-b-hover="handleHover" :key="lesson.LessonId" > <b-icon v-if="isHovered"  icon="calendar-date" scale="1.5"  ></b-icon> 
+                        <b-icon v-else  icon="calendar-date"  ></b-icon>  {{lesson.LessonDate  }}</b-col>
                   
-                  <b-col> <b-icon icon="calendar"  ></b-icon>  {{lesson.LessonDate  }}</b-col>
                   <b-col> <b-icon icon="clock"></b-icon>  {{lesson.LessonTime  }}</b-col>
                   <b-col> <b-icon icon="bell" ></b-icon> {{lesson.LessonDuration  }} min </b-col>
-                  <b-col><b-button class="mb-2" >Adjust </b-button></b-col>
+                  <b-col><b-button class="mb-2" >Adjjhgjhgust </b-button></b-col>
                   <b-col><b-button class="mb-2" >Delete </b-button></b-col>
                   <hr>
               </b-row>
+
           </ul>
           </div>
          
@@ -98,12 +103,14 @@
 
 
 <script>
+
 import axios from 'axios'
 import { mapState } from 'vuex'
 import authHeader from '../helpers/auth-header'
 export default {
     data() {
         return {
+            isHovered: false,
             displayLessonForm: false,
             lessons: [],
             StudentWithNoLessons: false,
@@ -121,6 +128,9 @@ export default {
         }
     },
     methods: {
+        handleHover(hovered) {
+            this.isHovered = hovered;
+        },
         onSubmit(event) {
             event.preventDefault();
             axios.post('http://localhost:3000/newLesson',
