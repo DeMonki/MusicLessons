@@ -33,7 +33,7 @@
                   
                   <b-col> <b-icon icon="clock"></b-icon>  {{lesson.LessonTime  }}</b-col>
                   <b-col> <b-icon icon="bell" ></b-icon> {{lesson.LessonDuration  }} min </b-col>
-                  <b-col><b-button class="mb-2" >Adjjhgjhgust </b-button></b-col>
+                  <b-col><b-button class="mb-2" >Adjust </b-button></b-col>
                   <b-col><b-button class="mb-2" >Delete </b-button></b-col>
                   <hr>
               </b-row>
