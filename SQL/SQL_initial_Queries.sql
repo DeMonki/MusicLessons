@@ -1,4 +1,15 @@
 
+docker start <CONTAINER NAME>
+docker start dpSQLServer
+
+ sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Fretlownode app.js" \                 
+   -p 1433:1433 --name dpSQLServer -h dpSQLServer  \
+   -d mcr.microsoft.com/mssql/server:2019-latest
+
+
+
+mssql -u sa -p "Fretlownode app.js" 
+
 --  CREATE TABLE Users (
 --     Id int IDENTITY (100, 1) NOT NULL PRIMARY KEY,
 --     FirstName VARCHAR(50),

@@ -163,10 +163,6 @@ export default {
                 }
             })
 
-            // axios.post('http://localhost:3000/lessonsByStudentId',
-            // {
-
-            // })
         },
         hideLessons() {
             this.lessons = [];
@@ -194,6 +190,11 @@ export default {
 
 <style scoped>
 
+:root {
+    --lightbrown: burlywood;
+    --aliceblue: aliceblue;
+}
+
 #main {
     width: 100%;
     height: 100vh;
@@ -207,8 +208,8 @@ export default {
 .lesson-form {
     font-size: 1rem;
     padding: 1.5rem;
-    background-color:aliceblue;
-    border: 2px solid burlywood;
+    background-color:var(--aliceblue);
+    border: 2px solid var(--lightbrown) ;
     border-radius: 10px;
 }
 </style>
